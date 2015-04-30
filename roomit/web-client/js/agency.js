@@ -57,16 +57,14 @@ function onload() {
                 if (firstName.indexOf(' ') >= 0) {
                     firstName = name.split(' ').slice(0, -1).join(' ');
                 }
+                var headers = {};
+                headers['Content-Type'] = 'application/json; charset=utf-8';
                 $.ajax({
-                    url: "/mail/contact_me.php",
                     type: "POST",
-                    data: {
-                        name: name,
-                        phone: phone,
-                        email: email,
-                        message: message
-                    },
+                    url: 'http://localhost:9000/sendMail',
+                    data: JSON.stringify({ name: name, email: email}),
                     cache: false,
+                    headers: headers,
                     success: function() {
                         // Success message
                         $('#success').html("<div class='alert alert-success'>");

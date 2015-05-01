@@ -61,7 +61,7 @@ function onload() {
                 headers['Content-Type'] = 'application/json; charset=utf-8';
                 $.ajax({
                     type: "POST",
-                    url: 'http://localhost:9000/sendMail',
+                    url: 'http://' + window.location.hostname + '/sendMail',
                     data: JSON.stringify({ name: name, email: email}),
                     cache: false,
                     headers: headers,

@@ -265,7 +265,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/3.jpg);
+    background: linear-gradient( rgba(42, 34, 34, 0.31), rgba(45, 44, 44, 0.4) ), url(../img/3.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -341,7 +341,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        padding: 50px 0;
     }
 }
 
